@@ -1,0 +1,10 @@
+Mouse0 - Attack
+A,W,S,D - Movement
+1 - Add HP
+Sword:
+    F - Activate armor
+    Space - Run
+Wizard:
+    F - Dash
+Archer:
+    F - Arrow
