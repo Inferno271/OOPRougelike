@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public abstract class PlayerBase : MonoBehaviour
 {
-    public GameObject coinText;
     public GameObject hpFX;
     [Header("Характеристики героя")]
     public float Speed;
@@ -15,7 +14,6 @@ public abstract class PlayerBase : MonoBehaviour
     protected Vector2 direction;
 	private Animator animator;
     private Rigidbody2D rb;
-    private Text txt;
     protected float timeBtwUseSpell;
     public float startTimeBtwUseSpell;
     protected Image imageCooldown;
@@ -26,7 +24,6 @@ public abstract class PlayerBase : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         imageCooldown = GameObject.FindGameObjectWithTag("Cooldown").GetComponent<Image>();
-        txt = GameObject.FindGameObjectWithTag("NumberCoins").GetComponent<Text>();  
         Time.timeScale = 1; 
         Boss.bossDeath = false;
         PlayerStats.armor = 1f;
@@ -69,20 +66,7 @@ public abstract class PlayerBase : MonoBehaviour
 		animator.SetFloat ("y", direction.y);
 	}
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Coin")
-        {
-            FindObjectOfType<AudioManager>().Play("Coin");
-            int money = other.GetComponent<Coins>().money;
-            PlayerStats.coins += money;
-            coinText.GetComponent<TextMesh>().text = "+" + money.ToString();
-            Instantiate(coinText, other.transform.position, Quaternion.identity);
-            txt.text = PlayerStats.coins.ToString();
 
-            Destroy(other.gameObject);            
-        }
-    }
 
     protected void AddHP()
     {
