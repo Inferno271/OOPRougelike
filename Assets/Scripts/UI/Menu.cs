@@ -7,8 +7,6 @@ public class Menu : MonoBehaviour
 {
     public GameObject loadingScreen;
     public GameObject hero;
-    public Slider slider;
-    public Text loadingText;
 
     void Awake() 
     {
@@ -51,15 +49,8 @@ public class Menu : MonoBehaviour
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
         hero.SetActive(false);
-        loadingScreen.SetActive(true);
-        while (!operation.isDone)
-        {
-            float progress = Mathf.Clamp01(operation.progress / 0.9f);
-            slider.value = progress;
-            loadingText.text = progress * 100f + "%";
-
-            yield return null;
-        }
+        yield return null;
+        
     }
 
 }

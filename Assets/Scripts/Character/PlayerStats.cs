@@ -10,7 +10,6 @@ public class PlayerStats : MonoBehaviour
     public static float armor;
     public static int numberOfBottle;
     public float maxHP;
-    public static int coins;
     public static bool death;
 
     void Awake()

@@ -2328,11 +2328,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1515309117289986883}
     m_Modifications:
-    - target: {fileID: 4230151718699239675, guid: e94347ca131fc064fb9e725af41af496,
-        type: 3}
-      propertyPath: m_Name
-      value: Reaper
-      objectReference: {fileID: 0}
     - target: {fileID: 4230151718699239678, guid: e94347ca131fc064fb9e725af41af496,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2386,6 +2381,21 @@ PrefabInstance:
     - target: {fileID: 4230151718699239678, guid: e94347ca131fc064fb9e725af41af496,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230151718699239675, guid: e94347ca131fc064fb9e725af41af496,
+        type: 3}
+      propertyPath: m_Name
+      value: Reaper
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567890988375621738, guid: e94347ca131fc064fb9e725af41af496,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567890988375621738, guid: e94347ca131fc064fb9e725af41af496,
+        type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

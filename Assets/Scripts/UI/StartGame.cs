@@ -37,7 +37,7 @@ public class StartGame : MonoBehaviour
                 break;
         }
         numberBottleText.text = PlayerStats.numberOfBottle.ToString();
-        numberCoins.text = PlayerStats.coins.ToString();
+        
     }
 
     void Update()
@@ -108,6 +108,6 @@ public class StartGame : MonoBehaviour
     void StatsNull()
     {
         PlayerStats.numberOfBottle = 0;
-        PlayerStats.coins = 0;
+        
     }
 }
