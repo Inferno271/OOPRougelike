@@ -28,6 +28,8 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
         }
     }
 
+
+
     // Обновление каждый кадр
     protected virtual void Update()
     {
@@ -35,6 +37,7 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
         Move();
         Attack();
     }
+
 
     // Обработка ввода (переопределена в подклассах)
     public abstract void TakeInput();
