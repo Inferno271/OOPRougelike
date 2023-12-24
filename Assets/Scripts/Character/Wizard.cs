@@ -19,7 +19,13 @@ public class Wizard : PlayerBase
         TestQ();
     }
 
-    protected override void Attack()
+    public override void TakeInput()
+    {
+        base.TakeInput();
+        AddHP();
+    }
+
+    public override void Attack()
     {
         if (Input.GetMouseButtonDown(0) && Time.timeScale == 1)
         { 

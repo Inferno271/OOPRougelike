@@ -24,7 +24,7 @@ public class Sword : PlayerBase
         TestQ();
     }
 
-    protected override void TakeInput()
+    public override void TakeInput()
     {
         direction = Vector2.zero;
         if (Input.GetKey (KeyCode.W)) {
@@ -55,7 +55,7 @@ public class Sword : PlayerBase
         AddHP();
     }
 
-    protected override void Attack()
+    public override void Attack()
     {
         if (timeBtwAttack <= 0)
         {

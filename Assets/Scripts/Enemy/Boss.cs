@@ -40,7 +40,7 @@ public class Boss : EnemyBase
 				Vector2 projectileMoveDirection = (projectileVector - tp).normalized * projectileSpeed;
 
 				var proj = Instantiate (projectile, transform.position, Quaternion.identity);
-				projectile.GetComponent<ProjectileBoss>().damage = damage * PlayerStats.armor;
+				projectile.GetComponent<ProjectileBoss>().damage = damage;
 				proj.GetComponent<Rigidbody2D> ().velocity = new Vector2 (projectileMoveDirection.x, projectileMoveDirection.y);
 
 				angle += angleStep;

@@ -50,7 +50,7 @@ public class RangeEnemy : EnemyBase
     {
         if (timeBtwAttack <= 0) {
             Instantiate(projectile, transform.position, Quaternion.identity);
-            projectile.GetComponent<EnemyProjectile>().damage = damage * PlayerStats.armor;
+            projectile.GetComponent<EnemyProjectile>().damage = damage;
             timeBtwAttack = startTimeBtwAttack;
         } else {
             timeBtwAttack -= Time.deltaTime;

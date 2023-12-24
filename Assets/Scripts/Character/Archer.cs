@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Archer : PlayerBase
+public class Archer : PlayerBase, IAttackable
 {
     private GameObject projectile;
     public int damageAbility;
@@ -19,7 +19,14 @@ public class Archer : PlayerBase
         TestQ();
     }
 
-    protected override void Attack()
+
+    public override void TakeInput()
+    {
+        base.TakeInput();
+        AddHP();
+    }
+
+    public override void Attack()
     {
         if (timeBtwAttack <= 0)
         {
@@ -65,4 +72,5 @@ public class Archer : PlayerBase
             StartCooldown(5);
         }
     }
+
 }

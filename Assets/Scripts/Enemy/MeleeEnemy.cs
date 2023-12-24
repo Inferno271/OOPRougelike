@@ -67,7 +67,7 @@ public class MeleeEnemy : EnemyBase
             {
                 transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
             } else {
-                PlayerStats.HP -= damage * PlayerStats.armor;
+                PlayerStats.HP -= damage;
             }
         }
     }
