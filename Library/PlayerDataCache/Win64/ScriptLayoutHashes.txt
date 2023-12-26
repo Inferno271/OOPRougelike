@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/games/Dungeonmaster/Memories.exe
+C:/games/Memories.exe
 SceneListBegin?
 Assets/Scenes/Menu.unity
 Assets/Scenes/Choose.unity
