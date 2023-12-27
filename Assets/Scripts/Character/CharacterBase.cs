@@ -43,18 +43,8 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
     public abstract void TakeInput();
 
     // Движение персонажа
-    protected void Move()
-    {
-        transform.Translate(direction * Speed * Time.deltaTime);
-        if (direction.x != 0 || direction.y != 0)
-        {
-            AnimationMove(direction);
-        }
-        else
-        {
-            anim.SetLayerWeight(1, 0);
-        }
-    }
+    public abstract void Move();
+
 
     // Анимация движения
     void AnimationMove(Vector2 dir)

@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/games/Dungeonmaster/Memories.exe
+E:/Gamedev/Unityprojects/OOPRougelike/build/Memories.exe
 SceneListBegin?
 Assets/Scenes/Menu.unity
 Assets/Scenes/Choose.unity
@@ -29,9 +29,9 @@ e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.P
 71f7f12b8d0f4fd73590db8bcb6d453c Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.Bloom
 e7a73f5f78ba6445195ec23b74a1ce2d Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
 af93f9c42e90877a9ba31e37adfd900c Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.MotionBlur
-46c29146d7a6239d6f65f9ea810d77a8 Assembly-CSharp.dll:.Archer
+4e30c5cea6b56815b0c651846bbc73c1 Assembly-CSharp.dll:.Archer
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Portal
-a232886e231e69075a2080d71189e693 Assembly-CSharp.dll:.Sword
+948df902abb6f5ed8c8c2597a1cfa8ec Assembly-CSharp.dll:.Sword
 7aaed052d3dae8b0014587087cff0f85 Assembly-CSharp.dll:.RoomTemplates
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -120,7 +120,7 @@ e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.P
 201e3fde670b00545944bb3db215c80a UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 8718b283478ce0780810afae1c1a60aa Assembly-CSharp.dll:.StartGame
 00274a21279f5cb831ce20f895049e38 Unity.TextMeshPro.dll:TMPro.TMP_SubMeshUI
-17809ef063ea76052c7e345d4f437fe5 Assembly-CSharp.dll:.Wizard
+a21ac6d772e8ef6bfad0ffe8f8d70793 Assembly-CSharp.dll:.Wizard
 e6ae40841db498b6e673877ac45ad208 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 1dcb82730d983b77cec736c6ef19f814 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery

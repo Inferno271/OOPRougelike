@@ -3,23 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class EnemyBase : MonoBehaviour
+public abstract class EnemyBase : CharacterBase
 {
     private SpriteRenderer sr;
-    protected Animator anim;
     protected Transform target;
     public GameObject damageText;
     public GameObject explosion;
     public Slider sl;
     private Shake shake;
     [Header("Характеристики врага")]
-    public float HP;
     public float speed;
     public float damage;
     public int maxDrop;
     
 
-    protected virtual void Start()
+    new protected virtual void Start()
     {
         shake = GameObject.FindGameObjectWithTag("ShakeManager").GetComponent<Shake>();
         anim = GetComponent<Animator>();
@@ -30,7 +28,7 @@ public abstract class EnemyBase : MonoBehaviour
     }
 
     protected abstract void Following();
-    protected abstract void Attack();
+    //public abstract void Attack();
 
     protected void FlipX(float other)
     {
@@ -42,7 +40,7 @@ public abstract class EnemyBase : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
+    public override void TakeDamage(int damage)
     {
         HP -= damage;
         sl.value = HP;
@@ -54,7 +52,7 @@ public abstract class EnemyBase : MonoBehaviour
         Instantiate(damageText, transform.position, Quaternion.identity);
     }
 
-    protected void CheckDeath()
+    public override void CheckDeath()
     {
         if (HP<=0)
         {

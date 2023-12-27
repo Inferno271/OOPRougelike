@@ -16,7 +16,7 @@ public class Boss : EnemyBase
 		Attack();
 	}
 
-    void Update() 
+    protected override void Update() 
     {
         Following();
         CheckDeath();
@@ -50,7 +50,12 @@ public class Boss : EnemyBase
 		}
 	}
 
-    protected override void Attack()
+    public override void Move()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void Attack()
     {
         StartCoroutine(SpawnProjectiles ());
 		//другие корутины
@@ -61,8 +66,13 @@ public class Boss : EnemyBase
         //движение босса
     }
 
-	private void OnDestroy() 
+	public void OnDestroy() 
 	{
 		bossDeath = true;
 	}
+
+    public override void TakeInput()
+    {
+        throw new System.NotImplementedException();
+    }
 }

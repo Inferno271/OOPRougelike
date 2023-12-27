@@ -9,9 +9,9 @@ public class Wizard : PlayerBase
     public int numberBullet;
     public GameObject teleportFX;
 
-    void Update ()
-	{
-		TakeInput ();
+    protected override void Update()
+    {
+        TakeInput ();
 		Move ();
         Attack();
         SwapProjectile();

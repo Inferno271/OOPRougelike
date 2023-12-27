@@ -7,11 +7,8 @@ public abstract class PlayerBase : CharacterBase, IMovable
 {    public GameObject hpFX;
     [Header("Общие Характеристики Героя")]
 
-    public float Speed;
     protected int damage;
-    public int minDamage;
-    public int maxDamage;
-    protected Vector2 direction;
+    protected new Vector2 direction;
     private Animator animator;
     private Rigidbody2D rb;
     protected float timeBtwUseSpell;
@@ -27,12 +24,12 @@ public abstract class PlayerBase : CharacterBase, IMovable
         imageCooldown = GameObject.FindGameObjectWithTag("Cooldown").GetComponent<Image>();
     }
 
-    new void Update()
+    protected override void Update()
     {
         TakeInput();
         Move();
         Attack();
-        AdditionalActions();
+
         TestQ();
     }
 
@@ -55,7 +52,7 @@ public abstract class PlayerBase : CharacterBase, IMovable
         
     }
 
-    public void Move()
+     public override void Move()
     {
         transform.Translate(direction * Speed * Time.deltaTime);
         if (direction.x != 0 || direction.y != 0)
@@ -90,10 +87,7 @@ public abstract class PlayerBase : CharacterBase, IMovable
 
     public abstract override void Attack();
 
-    protected virtual void AdditionalActions()
-    {
-        // Дополнительные действия, специфичные для каждого класса
-    }
+
 
     protected void StartCooldown(float cooldown)
     {
@@ -113,6 +107,9 @@ public abstract class PlayerBase : CharacterBase, IMovable
 
     protected void TestQ()
     {
-        // Дополнительные тестовые действия
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            transform.Translate(direction * 3f);
+        }
     }
 }

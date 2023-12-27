@@ -20,6 +20,7 @@ public class StartGame : MonoBehaviour
     void Awake() 
     {
         PlayerStats.death=false;
+        
     }
 
     void Start()
@@ -64,16 +65,13 @@ public class StartGame : MonoBehaviour
         }
         if (Boss.bossDeath)
         {
-            Invoke("ShowEndGame", 2f);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
+
+            Invoke("ShowEndGame", 1f);
         }
     }
 
-    private void ShowEndGame()
-    {
-        map.SetActive(false);
-        abilityPanel.SetActive(false);
-        end.SetActive(true);
-    }
+
 
     public void RestartGame()
     {

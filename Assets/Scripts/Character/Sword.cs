@@ -14,8 +14,8 @@ public class Sword : PlayerBase
     public GameObject armorFX;
     public float energy;
 
-    void Update ()
-	{
+    protected override void Update()
+    {
         Move ();
 		TakeInput ();
         Attack();

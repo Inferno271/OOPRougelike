@@ -10,7 +10,7 @@ public class Archer : PlayerBase, IAttackable
     private float timeBtwAttack;
     public float startTimeBtwAttack;
 
-    void Update ()
+    protected override void Update ()
 	{
 		TakeInput ();
 		Move ();

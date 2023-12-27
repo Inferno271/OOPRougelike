@@ -13,7 +13,7 @@ public class MeleeEnemy : EnemyBase
     protected bool runToRandom = false;
     protected float rndX, rndY;
 
-    void Update()
+    new void Update()
     {
         Following();
         CheckDeath();
@@ -59,7 +59,7 @@ public class MeleeEnemy : EnemyBase
         }
     }
 
-    protected override void Attack()
+    public override void Attack()
     {
         if (Time.timeScale != 0)
         {
@@ -78,6 +78,16 @@ public class MeleeEnemy : EnemyBase
         Gizmos.DrawWireSphere(transform.position, seeDistance);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackDistance);
+    }
+
+    public override void TakeInput()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void Move()
+    {
+        throw new System.NotImplementedException();
     }
     //Добавить функции
 }

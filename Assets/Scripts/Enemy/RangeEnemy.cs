@@ -15,7 +15,7 @@ public class RangeEnemy : EnemyBase
     private float timeBtwAttack;
     public float startTimeBtwAttack;
 
-    void Update()
+    new void Update()
     {
         Following();
         CheckDeath();
@@ -46,7 +46,7 @@ public class RangeEnemy : EnemyBase
         }
     }
 
-    protected override void Attack()
+    public override void Attack()
     {
         if (timeBtwAttack <= 0) {
             Instantiate(projectile, transform.position, Quaternion.identity);
@@ -65,5 +65,15 @@ public class RangeEnemy : EnemyBase
         Gizmos.DrawWireSphere(transform.position, stopDistance);
         Gizmos.color = Color.white;
         Gizmos.DrawWireSphere(transform.position, seeDistance);
+    }
+
+    public override void TakeInput()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void Move()
+    {
+        throw new System.NotImplementedException();
     }
 }
